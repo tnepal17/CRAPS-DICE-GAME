@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dice">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/backgroundImage"
+        android:scaleType="centerCrop"
+        android:focusable="true"
+        android:src="@drawable/crapsbackground"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scroll" >
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="thall59.groupassignment1.CrapsApp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="0dp"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingTop="16dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="16dp"
+                android:scrollIndicators="right">
+
+                <ImageView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="121dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/craps" />
+
+
+                <TextView
+                    android:id="@+id/winsloss"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:text="@string/winsloss"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    tools:context="thall59.groupassignment1.CrapsApp">
+
+                    <TextView
+                        android:id="@+id/bank"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="79dp"
+                        android:layout_marginLeft="79dp"
+                        android:gravity="bottom|right"
+                        android:padding="16dp"
+                        android:text="@string/bank"
+                        android:textColor="#010101"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/bankAmount"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/bank"
+                        android:layout_toRightOf="@+id/bank"
+                        android:background="@color/material_grey_300"
+                        android:gravity="fill_horizontal"
+                        android:padding="8dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#4c9569" />
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/bet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="BET:"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/betAmount"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/bank"
+                    android:layout_toRightOf="@+id/bank"
+                    android:background="@color/material_grey_300"
+                    android:gravity="fill_horizontal"
+                    android:padding="8dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#4c9569" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.20"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/diceOneView"
+                        android:layout_width="121dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="26dp"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:id="@+id/diceTwoView"
+                        android:layout_width="121dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="26dp"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/rollNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:text="@string/rollNumber"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/rollDieButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:onClick="rollButton"
+                    android:text="@string/roll_die" />
+
+                <TextView
+                    android:id="@+id/results"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:text="@string/results"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+
+                <Button
+                    android:id="@+id/restartButton"
+                    android:layout_width="121dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:onClick="newGame"
+                    android:text="@string/restart" />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

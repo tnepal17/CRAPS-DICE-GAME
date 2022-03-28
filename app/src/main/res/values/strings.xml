@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Craps Game</string>
+    <string name="roll_die">Roll!</string>
+    <string name="results">Results: </string>
+    <string name="newgame">New Game!</string>
+    <string name="loser">Sorry, but you lose</string>
+    <string name="pointToast">Your point is </string>
+    <string name="start">Start, roll the dice</string>
+    <string name="tryagain">Try again, only values 8 or under.</string>
+    <string name="rollNumber">Roll Number: </string>
+    <string name="winsloss">Player Wins: 0 House Wins: 0 </string>
+    <string name="restart"> Play Again! </string>
+    <string name="point">Point: </string>
+    <string name="rollAgain">Roll again! </string>
+    <string name="rulesButton">Rules</string>
+    <string name="newgameButton">Buy-in and Start a New Game!</string>
+    <string name="home">Home</string>
+    <string name="buyinAmount">Buy-in Amount: </string>
+    <string name="bank">Bank: </string>
+</resources>

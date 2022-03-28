@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/backgroundImage"
+        android:scaleType="centerCrop"
+        android:focusable="true"
+        android:src="@drawable/crapsbackground"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scroll" >
+
+
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="16dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="16dp"
+                android:scrollIndicators="right"
+                android:id="@+id/linearLayout"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="121dp"
+                    android:src="@drawable/craps"
+                    android:id="@+id/title"
+                    android:scaleType="fitXY"/>
+
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="16dp"
+                    tools:context="thall59.groupassignment1.CrapsApp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/buyinAmount"
+                        android:id="@+id/BuyinTextView"
+                        android:gravity="center|right"
+                        android:textColor="#010101"
+                        android:layout_alignTop="@+id/amount_display_textview"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignBottom="@+id/buyinAmount" />
+
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="6"
+                        android:id="@+id/buyinAmount"
+                        android:paddingBottom="16dp"
+                        android:digits="0123456789"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true" />
+
+
+                    <TextView
+                        android:id="@+id/amount_display_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/buyinAmount"
+                        android:layout_alignBottom="@+id/buyinAmount"
+                        android:layout_marginLeft="-16dp"
+                        android:background="@color/material_grey_300"
+                        android:gravity="fill_horizontal"
+                        android:padding="8dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#4c9569" />
+
+
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="271dp"
+                    android:layout_gravity="center_horizontal"
+                    android:weightSum="1">
+
+
+                    <Button
+                        android:id="@+id/newgameButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/rulesButton"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="37dp"
+                        android:onClick="newGameButton"
+                        android:text="@string/newgameButton" />
+
+                    <Button
+                        android:layout_width="126dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rulesButton"
+                        android:id="@+id/rulesButton"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignLeft="@+id/newgameButton"
+                        android:layout_alignStart="@+id/newgameButton"
+                        android:layout_marginBottom="68dp"
+                        android:layout_gravity="center_horizontal"
+                        android:onClick="rulesButton" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
